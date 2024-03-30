@@ -1,8 +1,8 @@
 # React UI Component - [DRD UI]
 
-![Component Preview](link-to-preview-image.png)
+<!-- ![Component Preview](link-to-preview-image.png) -->
 
-[This is a React UI component made by pouria darandi]
+This is a React UI component made by pouria darandi
 
 ## Table of Contents
 
