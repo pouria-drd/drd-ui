@@ -1,3 +1,29 @@
+# React UI Component - [DRD UI]
+
+![Component Preview](link-to-preview-image.png)
+
+[This is a React UI component made by pouria darandi]
+
+## Table of Contents
+
+- [Installation](#installation)
+<!-- - [Usage](#usage)
+- [Props](#props)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license) -->
+
+## Installation
+
+You have to setup tailwindcss before using this ui components.
+
+- [tailwindcss](https://tailwindcss.com/docs/guides/create-react-app)
+
+<!-- You can install the component via npm:
+
+```bash
+npm install [component-package-name]  -->
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -17,12 +43,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
