@@ -15,7 +15,7 @@ This is a React UI component made by pouria darandi
 
 ## Installation
 
-You have to setup tailwindcss before using this ui components.
+You have to setup tailwindcss before using this ui library.
 
 - [tailwindcss](https://tailwindcss.com/docs/guides/create-react-app)
 
