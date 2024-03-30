@@ -6,15 +6,15 @@ interface SpinnerCardProps {
   logo?: ReactNode;
 }
 
-const SpinnerCard = (spcProps: SpinnerCardProps) => {
-  const title = spcProps.title || "لطفا صبر کنید";
+const SpinnerCard = (spinnerCardProps: SpinnerCardProps) => {
+  const title = spinnerCardProps.title || "لطفا صبر کنید";
   return (
     <div
-      className="bg-white relative cursor-default
+      className="bg-white text-gray-700 relative cursor-default
         flex flex-col items-center justify-between gap-2
-        rounded-lg mx-auto w-fit px-10 py-5"
+        rounded-md w-fit px-6 py-4"
     >
-      {spcProps.logo && <span>{spcProps.logo}</span>}
+      {spinnerCardProps.logo && <span>{spinnerCardProps.logo}</span>}
       <div className="flex items-center justify-between gap-2 w-full">
         <Spinner size={15} borderWidth={2} />
         <p style={{ direction: "rtl" }}>{title}</p>

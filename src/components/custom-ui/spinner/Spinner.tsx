@@ -15,9 +15,11 @@ interface SpinnerProps {
  * @param size Size of the spinner.
  * @param borderWidth Manual border width of the spinner if (divide by 10) not suitable.
  */
-const Spinner = ({ size = 40, borderWidth: propBorderWidth }: SpinnerProps) => {
+const Spinner = (spinnerProps: SpinnerProps) => {
+  const size = spinnerProps.size || 40;
+
   // Calculate border width based on size if not provided.
-  const borderWidth = propBorderWidth || size / 10;
+  const borderWidth = spinnerProps.borderWidth || size / 10;
 
   const loaderStyle = {
     "--spinner-size": `${size}px`,
