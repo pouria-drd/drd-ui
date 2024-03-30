@@ -1,0 +1,79 @@
+.custom-button {
+  &.base-btn-class {
+    @apply transition-all hover:brightness-95 cursor-pointer
+    disabled:bg-opacity-80 disabled:cursor-not-allowed disabled:brightness-100
+    rounded-md min-w-20 px-4 py-2;
+  }
+
+  &.primary {
+    @apply bg-indigo-500 text-white;
+  }
+
+  &.secondary {
+    @apply bg-slate-500 text-white;
+  }
+
+  &.info {
+    @apply bg-blue-500 text-white;
+  }
+
+  &.dark {
+    @apply bg-gray-800 text-white;
+  }
+
+  &.light {
+    @apply bg-white text-black;
+  }
+
+  &.danger {
+    @apply bg-red-500 text-white;
+  }
+
+  &.success {
+    @apply bg-emerald-500 text-white;
+  }
+
+  &.warning {
+    @apply bg-yellow-500 text-black;
+  }
+
+  &.outlined-primary {
+    @apply border border-indigo-500 text-indigo-500 
+    hover:bg-indigo-500 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-secondary {
+    @apply border border-slate-500 text-slate-500 
+    hover:bg-slate-500 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-info {
+    @apply border border-blue-500 text-blue-500 
+    hover:bg-blue-500 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-dark {
+    @apply border border-gray-800 text-gray-800
+    hover:bg-gray-800 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-light {
+    @apply border border-white text-white
+    hover:bg-white hover:text-black hover:brightness-100;
+  }
+
+  &.outlined-danger {
+    @apply border border-red-500 text-red-500 
+    hover:bg-red-500 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-success {
+    @apply border border-emerald-500 text-emerald-500 
+    hover:bg-emerald-500 hover:text-white hover:brightness-100;
+  }
+
+  &.outlined-warning {
+    @apply border border-yellow-500 text-yellow-500 
+    hover:bg-yellow-500 hover:text-black hover:brightness-100;
+  }
+}
