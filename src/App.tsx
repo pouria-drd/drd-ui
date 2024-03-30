@@ -1,4 +1,5 @@
 import { Button } from "./components/custom-ui";
+import SpinnerCard from "./components/custom-ui/spinner/SpinnerCard";
 
 import "./assets/styles/App.css";
 
@@ -9,7 +10,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-200 flex flex-col gap-4 p-10">
+    <div className="bg-gray-200 flex flex-col gap-10 p-10">
       <h1 className="text-center text-2xl">Buttons</h1>
 
       <div className="grid grid-cols-4 gap-4">
@@ -116,6 +117,10 @@ function App() {
           Busy
         </Button>
       </div>
+
+      <h1 className="text-center text-2xl">Spinner Card</h1>
+
+      <SpinnerCard />
     </div>
   );
 }
