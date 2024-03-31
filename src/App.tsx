@@ -1,8 +1,10 @@
 import Buttons from "./components/preview/Buttons";
 
-import "./assets/styles/App.css";
 import Spinners from "./components/preview/Spinners";
 import Dropdowns from "./components/preview/Dropdowns";
+import Checkboxes from "./components/preview/Checkboxes";
+
+import "./assets/styles/App.css";
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
 
       <h1 className="text-center text-2xl">Dropdown</h1>
       <Dropdowns />
+
+      <h1 className="text-center text-2xl">Checkboxes</h1>
+      <Checkboxes />
     </div>
   );
 }

@@ -31,7 +31,7 @@ const Dropdown = (dropdownProps: DropdownProps) => {
     const num = dropdownProps.defaultOption;
 
     if (num !== undefined && num >= 0 && num < dropdownProps.children.length) {
-      handleOptionClick(dropdownProps.children[num]);
+      setSelectedOption(dropdownProps.children[num]);
     }
   }, [dropdownProps.defaultOption]);
 
