@@ -1,6 +1,5 @@
 import { Dropdown, DropdownOption } from "../custom-ui";
 
-import BaseCard from "./BaseCard";
 import RocketIcon from "../icons/RocketIcon";
 
 const Dropdowns = () => {
@@ -10,7 +9,7 @@ const Dropdowns = () => {
   };
 
   return (
-    <BaseCard className="!flex-row">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       <Dropdown onSelectOption={(opt) => onSelectOption(opt)}>
         <p>option 1</p>
         <p>option 2</p>
@@ -46,7 +45,7 @@ const Dropdowns = () => {
         <DropdownOption title="opt 1" value="0" icon={<RocketIcon />} />
         <DropdownOption title="opt 2" value="1" icon={<RocketIcon />} />
       </Dropdown>
-    </BaseCard>
+    </div>
   );
 };
 

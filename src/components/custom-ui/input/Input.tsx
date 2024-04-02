@@ -4,13 +4,17 @@ interface InputProps {
   placeHolder: string;
 
   value?: string;
+  disabled?: boolean;
   required?: boolean;
   maxLength?: number;
   minLength?: number;
   type?: React.InputHTMLAttributes<HTMLInputElement>["type"];
 
   className?: string;
-  errorMessage?: string; // Error message to display
+
+  errorMessage?: string;
+  errorMsgInBlur?: boolean;
+  errorBorderInBlur?: boolean;
 
   getID?: (id: string) => void;
   onChange?: (value: string) => void;
@@ -21,6 +25,7 @@ const Input = (inputProps: InputProps) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (inputProps.disabled) return;
     inputProps.onChange?.(e.target.value);
   };
 
@@ -28,27 +33,40 @@ const Input = (inputProps: InputProps) => {
     <div className="relative r2l w-full h-12">
       <input
         id={uniqueId}
+        required={true}
         type={inputProps.type}
+        value={inputProps.value}
+        disabled={inputProps.disabled}
         maxLength={inputProps.maxLength}
         minLength={inputProps.minLength}
-        value={inputProps.value}
-        required={true}
         className={`transition-all outline-none peer focus:ring-0
 
             bg-white 
             text-gray-800
 
-            border 
-            hover:border-blue-500
+            border
+            border-gray-400
+
+            ${
+              inputProps.disabled
+                ? "opacity-70 cursor-not-allowed hover:border-gray-400"
+                : "hover:border-blue-500"
+            }
+
+            ${inputProps.errorMessage && "hover:border-red-500"}
 
             ${
               isFocused && inputProps.errorMessage
-                ? "focus:border-red-500"
-                : "focus:border-blue-500"
+                ? "focus:border-red-500 hover:border-red-500"
+                : "focus:border-blue-500 hover:border-blue-500"
+            }
+
+            ${
+              inputProps.errorBorderInBlur &&
+              inputProps.errorMessage &&
+              "border-red-500"
             }
             
-            border-gray-400
-
             rounded-md px-2.5 pb-2 pt-4 w-full h-full r2l ${
               inputProps.className
             }`}
@@ -92,8 +110,14 @@ const Input = (inputProps: InputProps) => {
       </label>
 
       {/* Error message */}
-      {isFocused && inputProps.errorMessage && (
-        <p className="text-red-500 text-xs mt-1 ml-2">
+      {!inputProps.errorMsgInBlur && isFocused && inputProps.errorMessage && (
+        <p className="text-red-500 text-[10px] mt-[2px] ml-2">
+          {inputProps.errorMessage}
+        </p>
+      )}
+
+      {inputProps.errorMsgInBlur && inputProps.errorMessage && (
+        <p className="text-red-500 text-[10px] mt-[2px] ml-2">
           {inputProps.errorMessage}
         </p>
       )}

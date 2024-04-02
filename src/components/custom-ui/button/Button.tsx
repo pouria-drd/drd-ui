@@ -58,8 +58,8 @@ const Button = (btnProps: ButtonProps) => {
           btnProps.children
         ) : (
           <div className="flex items-center justify-center gap-2 w-full">
-            <Spinner size={12} borderWidth={1.75} />
             {btnProps.children}
+            <Spinner size={12} borderWidth={1.75} />
           </div>
         )}
       </>
