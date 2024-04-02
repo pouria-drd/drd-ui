@@ -1,6 +1,6 @@
-import Buttons from "./components/preview/Buttons";
-
 import Inputs from "./components/preview/Inputs";
+import Modals from "./components/preview/Modals";
+import Buttons from "./components/preview/Buttons";
 import Spinners from "./components/preview/Spinners";
 import Dropdowns from "./components/preview/Dropdowns";
 import Checkboxes from "./components/preview/Checkboxes";
@@ -21,6 +21,9 @@ function App() {
 
       <h1 className="text-center text-2xl">Inputs</h1>
       <Inputs />
+
+      <h1 className="text-center text-2xl">Modals</h1>
+      <Modals />
 
       <h1 className="text-center text-2xl">Spinner Card</h1>
       <Spinners />

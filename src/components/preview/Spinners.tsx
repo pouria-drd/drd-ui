@@ -1,7 +1,8 @@
+import { Spinner } from "../custom-ui";
+
 import BaseCard from "./BaseCard";
 import ViteIcon from "../icons/ViteIcon";
 import SpinnerCard from "../custom-ui/spinner/SpinnerCard";
-import { Spinner } from "../custom-ui";
 
 const Spinners = () => {
   return (
