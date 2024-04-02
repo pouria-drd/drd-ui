@@ -7,7 +7,7 @@ interface SpinnerCardProps {
 }
 
 const SpinnerCard = (spinnerCardProps: SpinnerCardProps) => {
-  const title = spinnerCardProps.title || "لطفا صبر کنید";
+  const title = spinnerCardProps.title || "Please wait";
   return (
     <div
       className="bg-white text-gray-700 relative cursor-default
@@ -16,8 +16,8 @@ const SpinnerCard = (spinnerCardProps: SpinnerCardProps) => {
     >
       {spinnerCardProps.logo && <span>{spinnerCardProps.logo}</span>}
       <div className="flex items-center justify-between gap-2 w-full">
-        <Spinner size={15} borderWidth={2} />
         <p style={{ direction: "rtl" }}>{title}</p>
+        <Spinner size={15} borderWidth={2} />
       </div>
     </div>
   );

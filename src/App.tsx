@@ -1,5 +1,6 @@
 import Inputs from "./components/preview/Inputs";
 import Modals from "./components/preview/Modals";
+import Toasts from "./components/preview/Toasts";
 import Buttons from "./components/preview/Buttons";
 import Spinners from "./components/preview/Spinners";
 import Dropdowns from "./components/preview/Dropdowns";
@@ -27,6 +28,9 @@ function App() {
 
       <h1 className="text-center text-2xl">Spinner Card</h1>
       <Spinners />
+
+      <h1 className="text-center text-2xl">Toasts</h1>
+      <Toasts />
     </div>
   );
 }

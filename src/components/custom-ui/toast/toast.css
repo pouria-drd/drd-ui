@@ -1,0 +1,112 @@
+.toast {
+  @apply transition-all cursor-default
+  rounded-lg rounded-b-none shadow-lg pl-3 pr-5 pt-2 pb-4 w-full sm:w-96;
+
+  &.success {
+    @apply bg-green-50 text-green-700;
+
+    &.toast-progress {
+      @apply after:bg-green-700;
+    }
+  }
+
+  &.warning {
+    @apply bg-yellow-50 text-amber-500;
+
+    &.toast-progress {
+      @apply after:bg-amber-500;
+    }
+  }
+
+  &.danger {
+    @apply bg-red-50 text-red-600;
+
+    &.toast-progress {
+      @apply after:bg-red-600;
+    }
+  }
+
+  &.info {
+    @apply bg-blue-50 text-blue-600;
+
+    &.toast-progress {
+      @apply after:bg-blue-600;
+    }
+  }
+
+  button {
+    @apply ml-2 bg-none border-none text-white
+      cursor-pointer text-lg transition-all;
+  }
+
+  &.success button {
+    @apply text-green-700;
+  }
+
+  &.warning button {
+    @apply text-amber-500;
+  }
+
+  &.danger button {
+    @apply text-red-700;
+  }
+
+  &.info button {
+    @apply text-blue-600;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 0.275s ease-out;
+  }
+
+  &.fadeOut {
+    animation: fadeOut 0.275s ease-in forwards;
+  }
+}
+
+.toast-progress {
+  position: relative;
+  text-decoration: none;
+}
+
+.toast-progress::after {
+  left: 0;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  animation: toast-progress-animation var(--toastDuration, 5s) ease-in;
+}
+
+@keyframes toast-progress-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

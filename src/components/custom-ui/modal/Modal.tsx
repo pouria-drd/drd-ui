@@ -1,4 +1,4 @@
-import CloseIcon from "./icons/CloseIcon";
+import CloseIcon from "../icons/CloseIcon";
 import { useModal } from "../contexts/ModalProvider";
 
 interface ModalProps {
