@@ -9,9 +9,7 @@ const Buttons = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
       {/* Primary */}
-      <Button className="!bg-orange-500" onClick={handleBtnClick}>
-        Primary
-      </Button>
+      <Button onClick={handleBtnClick}>Primary</Button>
       <Button onClick={handleBtnClick} outlined={true}>
         Outlined
       </Button>
