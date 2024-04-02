@@ -1,9 +1,10 @@
-import { Checkbox } from "../custom-ui";
 import BaseCard from "./BaseCard";
+import { Checkbox } from "../custom-ui";
 
 const Checkboxes = () => {
   const handleCheckbox = (value: boolean) => {
     console.log(value);
+    alert(`Checkbox Clicked: value ${value}`);
   };
 
   return (

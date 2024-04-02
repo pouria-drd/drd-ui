@@ -6,6 +6,7 @@ import RocketIcon from "../icons/RocketIcon";
 const Dropdowns = () => {
   const onSelectOption = (opt: any) => {
     console.log(opt.props);
+    alert(`Dropdown Clicked`);
   };
 
   return (
@@ -18,6 +19,15 @@ const Dropdowns = () => {
       <Dropdown
         onSelectOption={(opt) => onSelectOption(opt)}
         title="with default title"
+      >
+        <p>option 1</p>
+        <p>option 2</p>
+      </Dropdown>
+
+      <Dropdown
+        title="disabled dropdown"
+        disabled={true}
+        onSelectOption={(opt) => onSelectOption(opt)}
       >
         <p>option 1</p>
         <p>option 2</p>

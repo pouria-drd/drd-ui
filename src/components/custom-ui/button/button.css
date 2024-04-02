@@ -22,7 +22,7 @@
   }
 
   &.light {
-    @apply bg-white text-black;
+    @apply bg-white text-gray-800;
   }
 
   &.danger {
@@ -34,7 +34,7 @@
   }
 
   &.warning {
-    @apply bg-yellow-500 text-black;
+    @apply bg-yellow-500 text-gray-800;
   }
 
   &.outlined-primary {
@@ -59,7 +59,7 @@
 
   &.outlined-light {
     @apply border border-white text-white
-    hover:bg-white hover:text-black hover:brightness-100;
+    hover:bg-white hover:text-gray-800 hover:brightness-100;
   }
 
   &.outlined-danger {
@@ -74,6 +74,6 @@
 
   &.outlined-warning {
     @apply border border-yellow-500 text-yellow-500 
-    hover:bg-yellow-500 hover:text-black hover:brightness-100;
+    hover:bg-yellow-500 hover:text-gray-800 hover:brightness-100;
   }
 }

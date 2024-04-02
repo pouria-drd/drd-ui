@@ -2,8 +2,8 @@ import { Button } from "../custom-ui";
 
 const Buttons = () => {
   const handleBtnClick = () => {
-    alert("Button Clicked");
     console.log("Button Clicked");
+    alert("Button Clicked");
   };
 
   return (

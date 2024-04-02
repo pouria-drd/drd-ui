@@ -6,8 +6,9 @@ import ArrowDownIcon from "./icons/ArrowDownIcon";
 
 interface DropdownProps {
   title?: string;
-  defaultOption?: number;
   children: ReactNode[];
+  disabled?: boolean;
+  defaultOption?: number;
   onSelectOption?: (option: ReactNode) => void;
 }
 
@@ -18,10 +19,12 @@ const Dropdown = (dropdownProps: DropdownProps) => {
   const [selectedOption, setSelectedOption] = useState<any>(null);
 
   const handleDropdownClick = () => {
+    if (dropdownProps.disabled) return;
     setIsOpen(!isOpen);
   };
 
   const handleOptionClick = (option: any) => {
+    if (dropdownProps.disabled) return;
     setSelectedOption(option);
     setIsOpen(false);
     dropdownProps.onSelectOption?.(option);
@@ -39,9 +42,13 @@ const Dropdown = (dropdownProps: DropdownProps) => {
     <div className="flex flex-col items-center justify-center gap-2 min-w-40">
       <div
         onClick={handleDropdownClick}
-        className="bg-white text-gray-400 cursor-pointer
+        className={`bg-white text-gray-400
         flex items-center justify-between gap-2 w-full
-        rounded-md p-2.5"
+        rounded-md p-2.5 ${
+          dropdownProps.disabled
+            ? "bg-opacity-80 cursor-not-allowed"
+            : " bg-opacity-100 cursor-pointer"
+        }`}
       >
         <span className={`${isOpen ? "rotate-180" : ""} transition-all`}>
           <ArrowDownIcon />
